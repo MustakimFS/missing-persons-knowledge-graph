@@ -1,0 +1,457 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13/"
+     xml:base="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13/"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:Race="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Race/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:untitled-ontology-13="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13">
+        <owl:imports rdf:resource="http://dbpedia.org/ontology/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#hasCityOfOrigin -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#hasCityOfOrigin">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#hasLocationOfOrigin"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Location"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#City"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#hasCountyOfOrigin -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#hasCountyOfOrigin">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#hasLocationOfOrigin"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Location"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#County"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#hasLocationOfOrigin -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#hasLocationOfOrigin">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Victim"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#isOfAge -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#isOfAge">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Victim"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Age"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#isOfBiologicalSex -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#isOfBiologicalSex">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Victim"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Biological_Sex"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#isOfRace -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#isOfRace">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Victim"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Race"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Age -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Age"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Bio_Sex -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Bio_Sex">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Biological_Sex"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Case_Number -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Case_Number">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Victim"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Victim"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#City -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#City">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Victim"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Victim"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#CoD -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#CoD">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Victim"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Victim"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Coordinates -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Coordinates">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Victim"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Victim"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#County -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#County">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Victim"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Victim"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Current_Age -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Current_Age">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Age"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Age"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#DLC -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#DLC">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Victim"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Victim"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Legal_Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Legal_Name">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Victim"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Victim"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Missing_Age -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Missing_Age">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Age"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Age"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Victim -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Victim">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Race/Ethnicity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Race/Ethnicity">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Race"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://schema.org/City -->
+
+    <rdf:Description rdf:about="http://schema.org/City">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#City"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Age -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Age"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Asian -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Asian">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Biological_Sex -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Biological_Sex"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Caucasian -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Caucasian">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#City -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#City">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#County -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#County">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Female -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Female">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Biological_Sex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Infant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Infant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Age"/>
+        <rdfs:comment>0 to 12 months or 1&gt; Year</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Kid -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Kid">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Age"/>
+        <rdfs:comment>Years 6-12</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Location"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Male -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Male">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Biological_Sex"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Middle_Aged_Adult -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Middle_Aged_Adult">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Age"/>
+        <rdfs:comment>Years 35-55</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Mixed_Race -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Mixed_Race">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Other -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Other">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Race -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Race"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Senior -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Senior">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Age"/>
+        <rdfs:comment>Years 55+</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Teen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Teen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Age"/>
+        <rdfs:comment>Years 13-19</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Toddler -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Toddler">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Age"/>
+        <rdfs:comment>Years 1-5</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Victim -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Victim"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Young_Adult -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Young_Adult">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Age"/>
+        <rdfs:comment>Years 18-35</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Black_/_African_American -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Black_/_African_American">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Haiwain/Pacific_Islander -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Haiwain/Pacific_Islander">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Race"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Claire_Southwell -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Claire_Southwell">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Victim"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#isOfBiologicalSex"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dhrub/ontologies/2024/10/untitled-ontology-13#Female"/>
+            </owl:Restriction>
+        </rdf:type>
+        <untitled-ontology-13:Case_Number>MP01114</untitled-ontology-13:Case_Number>
+        <untitled-ontology-13:City>Los Angeles</untitled-ontology-13:City>
+        <untitled-ontology-13:CoD>Description of why the person has disappeared</untitled-ontology-13:CoD>
+        <untitled-ontology-13:Coordinates>11,11</untitled-ontology-13:Coordinates>
+        <untitled-ontology-13:County>LA County</untitled-ontology-13:County>
+        <untitled-ontology-13:Current_Age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</untitled-ontology-13:Current_Age>
+        <untitled-ontology-13:DLC>Description</untitled-ontology-13:DLC>
+        <untitled-ontology-13:DLC rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-11-01</untitled-ontology-13:DLC>
+        <untitled-ontology-13:Legal_Name>Claire Southwell</untitled-ontology-13:Legal_Name>
+        <untitled-ontology-13:Missing_Age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">21</untitled-ontology-13:Missing_Age>
+        <Race:Ethnicity>Caucasian</Race:Ethnicity>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

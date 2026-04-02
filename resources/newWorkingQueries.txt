@@ -1,0 +1,25 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX mpr: <http://www.semanticweb.org/ser531/ontologies/MissingPersonReport#>
+SELECT *
+WHERE {
+  ?victim a mpr:Victim;
+          rdfs:Legal_Name ?name;
+          rdfs:hasCityOfOrigin ?city_of_origin;
+          rdfs:hasCountyOfOrigin ?county_of_origin;
+          rdfs:Missing_Age ?missing_age;
+    	  rdfs:isOfAge ?age;
+       	  rdfs:Case_Number ?case_number;
+    	  rdfs:Bio_Sex ?sex;
+    	  mpr:hasCircumstanceOfDisappearance ?cod;
+    	  rdfs:Race_Ethnicity ?race;
+     	  rdfs:hasMapData ?map;
+    	  rdfs:Coordinates ?cords;
+    	  rdfs:DLC ?DLC;
+    	  mpr:columnURI ?namUS;
+    	  mpr:hasImageURL ?image.
+  BIND(xsd:integer(REPLACE(STR(?age), "^.*#", "")) AS ?some_age).
+  FILTER(?some_age <= 20 && ?some_age > 18)
+  FILTER regex(STR(?city_of_origin), "Los%20Angeles$")
+  FILTER regex(STR(?sex), "Female")
+}
