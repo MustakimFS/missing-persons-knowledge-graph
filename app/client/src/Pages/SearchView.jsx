@@ -49,31 +49,46 @@ const SearchView = () => {
     const isOfAge = searchData?.isOfAge || [];
 
     // Data Cleaner
-    const cleanData = (data) => {
-        const decode = (value) =>
-            value?.includes("#") ? decodeURIComponent(value.split("#")[1]) : decodeURIComponent(value || "N/A");
-        return {
-            caseNumber: decode(data.case_number),
-            name: data.name || "N/A",
-            age: decode(data.missing_age),
-            city: decode(data.city_of_origin),
-            county: decode(data.county_of_origin),
-            cause: data.cod || "N/A",
-            race: data.race || "N/A",
-            probableCause: data.cause_of_death || "N/A",
-            biologicalSex: decode(data.sex),
-            victimImage: data.image || null,
-        };
-    };
+    const cleanData = (data) => ({
+        id: data.id,
+        caseNumber: data.case_number,
+        name: data.name || "N/A",
+        age: data.age,
+        city: data.city,
+        county: data.county,
+        cause: data.circumstance || "N/A",
+        race: data.race || "N/A",
+        biologicalSex: data.sex,
+        victimImage: data.image_url || null,
+        namusUrl: data.namus_url,
+        lat: data.lat,
+        lng: data.lng,
+    });
 
     // Fetch all cases based on the parameters
     const fetchCases = async () => {
         if (!searchData) return;
         try {
-            const res = await axios.post("http://localhost:8080/case/sidebar", {
-                victimName, county_of_origin, isOfAge, city_of_origin, cod, missing_age, Bio_Sex, caseID, Race_Ethnicity,
-            });
-            const result = res.data.records.map(cleanData);
+            const params = new URLSearchParams();
+            if (victimName) params.append("name", victimName);
+            if (city_of_origin) params.append("city", city_of_origin);
+            if (county_of_origin) params.append("county", county_of_origin);
+            if (Bio_Sex) params.append("sex", Bio_Sex);
+
+            // Race is an array — just use the first selected value
+            if (Race_Ethnicity?.length > 0) params.append("race", Race_Ethnicity[0]);
+
+            // Age range is array of [min,max] pairs — find overall min and max
+            if (missing_age?.length > 0) {
+                const allAges = missing_age.flat();
+                params.append("min_age", Math.min(...allAges));
+                params.append("max_age", Math.max(...allAges));
+            }
+
+            params.append("limit", 500);
+
+            const res = await axios.get(`${import.meta.env.VITE_API_URL}/cases?${params.toString()}`);
+            const result = res.data.cases.map(cleanData);
             setCases(result);
         } catch (error) {
             console.error("Error fetching cases:", error);

@@ -12,17 +12,8 @@ const CaseView = () => {
 
     const fetchCaseDetails = async () => {
         try {
-            const res = await axios.post('http://localhost:8080/case/caseView', { caseNumber: id });
-            const result = res.data.records;
-            const victim = result[0];
-
-            if (victim.cords) {
-                const coordinates = dataCleaner(victim.cords).split(',');
-                victim.latitude = coordinates[0];
-                victim.longitude = coordinates[1];
-            }
-
-            setVictimData(victim);
+            const res = await axios.get(`${import.meta.env.VITE_API_URL}/cases/${id}`);
+            setVictimData(res.data);
         } catch (error) {
             console.error("Error fetching case details:", error);
         }
@@ -51,28 +42,19 @@ const CaseView = () => {
 
     const {
         name: victimName,
-        city_of_origin: victimCityRaw,
-        county_of_origin: victimCountyRaw,
-        missing_age: victimMissingAgeRaw,
-        age: victimAgeRaw,
-        case_number: victimCaseNumberRaw,
-        sex: victimSexRaw,
-        cod: victimCod,
+        city: victimCity,
+        county: victimCounty,
+        age: victimMissingAge,
+        case_number: victimCaseNumber,
+        sex: victimSex,
+        circumstance: victimCod,
         race: victimRace,
-        DLC: victimDLCRaw,
-        namUS: victimNamUS,
-        image: victimImage,
-        latitude,
-        longitude
+        dlc: victimDLC,
+        namus_url: victimNamUS,
+        image_url: victimImage,
+        lat: latitude,
+        lng: longitude,
     } = victimData;
-
-    const victimCity = dataCleaner(victimCityRaw);
-    const victimCounty = dataCleaner(victimCountyRaw);
-    const victimMissingAge = dataCleaner(victimMissingAgeRaw);
-    const victimAge = dataCleaner(victimAgeRaw);
-    const victimCaseNumber = dataCleaner(victimCaseNumberRaw);
-    const victimSex = dataCleaner(victimSexRaw);
-    const victimDLC = dataCleaner(victimDLCRaw);
 
     const handleViewMoreClick = () => {
         if (victimNamUS) {
@@ -122,7 +104,14 @@ const CaseView = () => {
                             <div className="text-gray-600 space-y-2">
                                 <h3 className="text-xl text-black font-bold">Demographics</h3>
                                 <p><strong>Missing Age:</strong> {victimMissingAge || "N/A"} Years</p>
-                                <p><strong>Current Age:</strong> {victimAge || "N/A"} Years</p>
+                                <p><strong>Current Age:</strong> {
+                                    (() => {
+                                        const missingYear = new Date(victimDLC).getFullYear();
+                                        const currentYear = new Date().getFullYear();
+                                        const diff = currentYear - missingYear;
+                                        return diff >= 0 ? parseInt(victimMissingAge) + diff : victimMissingAge;
+                                    })()
+                                } Years</p>
                             </div>
 
                             <div className="border-t border-gray-300 mt-6"></div>

@@ -1,8 +1,0 @@
---------- API DOCCUMENTATION --------- 
-### Refer to the NAME of Querey from the Google Doc Ram Created with all the Quereys,
-If you decide to add an endpoint for a Query that doesn't exist, make sure to add it to the Google Doc as well!
-
-CASE ROUTE APIs
-1. api/case/ ------> Querey 1. List of all missing cases and their case numbers.
-2. api/case/sidebar ------> Query 2. All the data based on the given inputs.
-3. api/case/caseView -----> Query 3. Solo Victim Data based on CaseNumber passed.

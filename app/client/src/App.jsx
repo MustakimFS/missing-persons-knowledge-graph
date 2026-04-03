@@ -15,7 +15,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/cases" element={<SearchView />} />
         {/*<Route path="CaseView" element={<CaseView />} /> */}
-        <Route path="CaseView/:id" element={<CaseView />} />
+        <Route path="/caseview/:id" element={<CaseView />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

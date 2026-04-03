@@ -31,7 +31,7 @@ const CaseTable = ({ cases }) => {
                         <tr
                             key={index}
                             className="border-b border-gray-200 cursor-pointer hover:bg-gray-100"
-                            onClick={() => handleRowClick(caseData.caseNumber)} // Navigate on row click
+                            onClick={() => handleRowClick(caseData.id)} // Navigate on row click
                         >
                             <td className="py-4 px-4 text-gray-600">{caseData.caseNumber || "N/A"}</td>
                             <td className="py-4 px-4">

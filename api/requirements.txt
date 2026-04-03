@@ -1,0 +1,4 @@
+fastapi
+uvicorn
+rdflib
+python-dotenv

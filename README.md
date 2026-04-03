@@ -1,74 +1,54 @@
-Vercel link to run the project without setup https://missing-person-tracker.vercel.app/
+# Missing Persons Knowledge Graph Tracker
 
-![image](https://github.com/user-attachments/assets/c609635a-ad07-4dde-ae4c-550fff655579)
+A full-stack web application for tracking and searching missing persons cases in California using Knowledge Graph and Semantic Web technologies.
 
-# Missing Persons Tracker using Knowledge Graphs
+## Live Demo
+[Coming soon - deploying to Vercel + Render]
 
+## Tech Stack
+- **Frontend:** React, Vite, Tailwind CSS
+- **Backend:** FastAPI, Python
+- **Knowledge Graph:** RDF/OWL Ontology, RDFLib, SPARQL
+- **Data:** NamUs (National Missing and Unidentified Persons System) - 3,559 real cases
 
-Instructions on setup
-------
+## Features
+- Search missing persons by name, case ID, city, county, race, sex, and age range
+- Detailed case view with photo, demographics, circumstances, and Google Maps location
+- Table and card view toggle for search results
+- Calculated current age based on date of last contact
+- Direct link to official NamUs case page
 
+## Architecture
+The data is modeled as an RDF Knowledge Graph using a custom OWL ontology (`protege/`). The FastAPI backend loads the RDF triples at startup and serves SPARQL-style filtered queries via REST endpoints. The React frontend consumes the API and renders results.
 
-### Requirements:
-[Latest version of Node.js to run npm commands](https://nodejs.org/en/download/prebuilt-installer)
+## Local Setup
 
+### Backend (FastAPI)
+```bash
+cd api
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
+API runs at `http://localhost:8000`
+Docs at `http://localhost:8000/docs`
 
-### Steps to run in command line to launch the application locally:
+### Frontend (React)
+```bash
+cd app/client
+npm install
+npm run dev
+```
+App runs at `http://localhost:5173`
 
-1. Ensure npm is installed by running the command npm -v in command line. This should return your NPM version
+### Environment Variables
+Create `app/client/.env`:
+```
+VITE_API_URL=http://localhost:8000
+```
 
-2. Navigate to the client folder under app through \app\client.
+## Data
+The knowledge graph is built from NamUs data for California, Texas, and Alaska. The RDF ontology is located in `protege/` and the compiled triples are in `api/data/result-triples.ttl`.
 
-3. In the client folder, run the following command to install the required dependencies
-   ```
-    npm install .
-   ```
-
-   or
-
-   ```
-    npm i . 
-
-   ```
-
-4. Keep the shell for the client folder open.
-
-5. Navigate to the server folder under \app\server.
-
-6. In the server folder, run the following command to install the required dependencies.
-
-   ```
-    npm install .
-   ```
-
-   or
-
-   ```
-    npm i . 
-   ```
-
-7. Keep the shell for the server folder open.
-
-8. In the server folder, create a .env file and paste the following into the .env file. This is the api key necessary to run the ChatGPT summarizer. This is important as github does not allow users to push .env files into repositories.:
-
-   ```
-    OPENAI_API_KEY=<Insert OPEN API key here>
-   ```
-![image](https://github.com/user-attachments/assets/92fe8886-891c-4299-956a-06349baacc0e)
-
-
-9. In the shell for the server folder, run the following command to get the server started:
-   ```
-    npm run dev 
-   ```
-
-10. In the shell for the client folder, run the following command to get the client started:
-   ```
-    npm run dev 
-   ```
-
-11. In a browser, open the http://localhost:5173/ to view the launched application!
-
-![Landing page](https://github.com/user-attachments/assets/2204fb20-d480-4bc7-afb1-4b8da35510bc)
-
-
+## Contributors
+Originally developed as part of SER531 at Arizona State University.
+This repository contains my continued development and enhancements.
