@@ -3,7 +3,7 @@
 A full-stack web application for tracking and searching missing persons cases in California using Knowledge Graph and Semantic Web technologies.
 
 ## Live Demo
-[Coming soon - deploying to Vercel + Render]
+https://missing-persons-knowledge-graph.vercel.app
 
 ## Tech Stack
 - **Frontend:** React, Vite, Tailwind CSS
