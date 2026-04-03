@@ -53,3 +53,5 @@ The knowledge graph is built from NamUs data for California, Texas, and Alaska. 
 ## Contributors
 Originally developed as part of SER531 at Arizona State University in collaboration with team members.
 Continued development, FastAPI migration, and deployment by Mustakim Shikalgar.
+
+This repository contains my continued development, FastAPI migration, and live deployment.
