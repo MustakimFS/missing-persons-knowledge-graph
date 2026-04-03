@@ -51,5 +51,5 @@ VITE_API_URL=http://localhost:8000
 The knowledge graph is built from NamUs data for California, Texas, and Alaska. The RDF ontology is located in `protege/` and the compiled triples are in `api/data/result-triples.ttl`.
 
 ## Contributors
-Originally developed as part of SER531 at Arizona State University.
-This repository contains my continued development and enhancements.
+Originally developed as part of SER531 at Arizona State University in collaboration with team members.
+Continued development, FastAPI migration, and deployment by Mustakim Shikalgar.
